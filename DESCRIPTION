@@ -1,10 +1,16 @@
 Package: jdcR
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Assorted Tools for Quantitative Ecology
 Version: 0.1
 Date: 2015-06-19
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Authors@R:  as.person("Jason D. Carlisle <jason.d.carlisle@gmail.com> [aut, cre]")
+Maintainer: Jason D. Carlisle <jason.d.carlisle@gmail.com>
+Description: This package is where I develop and maintain R code I find useful in my quantitative-ecology-related endeavors.
+Imports:
+    sp,
+    rgdal,
+    rgeos,
+    raster,
+    ggplot2
+License: GPL-3
 LazyData: TRUE
