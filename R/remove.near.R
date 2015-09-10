@@ -24,10 +24,10 @@ remove.near <- function(pts, dist){
   # If some points are too close, start thinning,
   # Else, end
   if(min(d, na.rm=TRUE) < dist){
-    #Loop through each point and determine which points are within Dist
+    #Loop through each point and determine which points are within dist
     outDF <- data.frame()
     for(i in 1:nrow(d)){
-      d.match <- unique(which(d[i,] < Dist))
+      d.match <- unique(which(d[i,] < dist))
       if(length(d.match) > 0){
         outDF <- rbind(outDF, data.frame(inPt=i, closePt=paste(d.match, collapse=",")))
       }#close if statement
