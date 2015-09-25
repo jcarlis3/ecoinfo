@@ -9,7 +9,7 @@ remove.near(pts, dist)
 \arguments{
 \item{pts}{SpatialPointsDataFrame, the input points to thin based on proximity.}
 
-\item{dist}{Scalar, the minimum distance features in pts can be from each other.}
+\item{dist}{Scalar, the minimum distance features in pts can be from each other.  Unit is meters for projected coordinate systems.}
 }
 \value{
 A SpatialPointsDataFrame with equal or fewer features than pts.
