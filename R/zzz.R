@@ -1,7 +1,7 @@
 .onAttach <- function(libname, pkgname){
 
-  # Manually update the version number
-  v <- "0.1.1"
+  # Query version number from DESCRIPTION
+  v <- utils::packageVersion("jdcR")
 
   # Startup message
   packageStartupMessage(paste("jdcR (version ", v ,")", sep=""))

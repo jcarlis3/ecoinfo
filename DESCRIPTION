@@ -1,13 +1,14 @@
 Package: jdcR
 Type: Package
 Title: Assorted Tools for Quantitative Ecology
-Version: 0.1.1
-Date: 2015-06-19
+Version: 0.1.2
+Date: 2015-10-06
 Authors@R:  as.person("Jason D. Carlisle <jason.d.carlisle@gmail.com> [aut, cre]")
 Maintainer: Jason D. Carlisle <jason.d.carlisle@gmail.com>
 Description: This package is where I develop and maintain assorted tools that I
     find useful in my ecological research.
 Imports:
+    utils,
     sp,
     rgdal,
     rgeos,
