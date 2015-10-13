@@ -6,7 +6,7 @@
 #' @param b Scalar, the number of bootstrap iterations to perform.
 #' @param ci Scalar, the level of confidence interval (CI),  Default is 95\% CI.
 #' @return A named numeric vector giving the lower and upper confidence limits.
-#' @author Jason D. Carlisle, University of Wyoming, <jason.d.carlisle@@gmail.com>
+#' @author Jason D. Carlisle, University of Wyoming
 #' @examples
 #' set.seed(333)
 #' x <- runif(50, min=0, max=10)

@@ -1,12 +1,13 @@
-Package: jdcR
+Package: ecoinfo
 Type: Package
-Title: Assorted Tools for Quantitative Ecology
-Version: 0.1.2
-Date: 2015-10-06
-Authors@R:  as.person("Jason D. Carlisle <jason.d.carlisle@gmail.com> [aut, cre]")
+Title: Assorted Tools for Ecoinformatics
+Version: 0.0.1
+Date: 2015-10-13
+Authors@R:  c(
+    as.person("Jason D. Carlisle <jason.d.carlisle@gmail.com> [aut, cre]"),
+    as.person("Shannon E. Albeke <salbeke@uwyo.edu> [aut]"))
 Maintainer: Jason D. Carlisle <jason.d.carlisle@gmail.com>
-Description: This package is where I develop and maintain assorted tools that I
-    find useful in my ecological research.
+Description: Assorted tools useful in ...
 Imports:
     utils,
     sp,

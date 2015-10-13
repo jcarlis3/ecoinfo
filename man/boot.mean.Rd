@@ -25,6 +25,6 @@ x <- runif(50, min=0, max=10)
 boot.mean(vec=x, b=100, ci=0.95)
 }
 \author{
-Jason D. Carlisle, University of Wyoming, <jason.d.carlisle@gmail.com>
+Jason D. Carlisle, University of Wyoming
 }
 

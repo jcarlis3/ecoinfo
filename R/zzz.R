@@ -1,9 +1,9 @@
 .onAttach <- function(libname, pkgname){
 
   # Query version number from DESCRIPTION
-  v <- utils::packageVersion("jdcR")
+  v <- utils::packageVersion("ecoinfo")
 
   # Startup message
-  packageStartupMessage(paste("jdcR (version ", v ,")", sep=""))
+  packageStartupMessage(paste("ecoinfo (version ", v ,")", sep=""))
 
 }

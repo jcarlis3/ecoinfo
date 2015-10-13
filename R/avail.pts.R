@@ -9,7 +9,7 @@
 #' @param dist Scalar, passed to jdcR::remove.near.  The minimum distance features in pts can be from each other.  Unit is meters for projected coordinate systems.
 #' @param mult Scalar, the ratio of available points to used points.  1 for a balanced design, 2 for twice as many available points.
 #' @return A SpatialPointsDataFrame of random, available (i.e., pseudo-absence) points.
-#' @author Jason D. Carlisle and Shannon E. Albeke, University of Wyoming, <jason.d.carlisle@@gmail.com>
+#' @author Shannon E. Albeke and Jason D. Carlisle, University of Wyoming
 
 
 avail.pts <- function(used, poly, dist=NULL, mult=1){

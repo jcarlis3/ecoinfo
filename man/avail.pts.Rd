@@ -24,6 +24,6 @@ The created points conform to a user-specified proximity rule, i.e., points are 
 minimum distance from each other or the original used points.
 }
 \author{
-Jason D. Carlisle and Shannon E. Albeke, University of Wyoming, <jason.d.carlisle@gmail.com>
+Shannon E. Albeke and Jason D. Carlisle, University of Wyoming
 }
 

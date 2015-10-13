@@ -21,6 +21,6 @@ Note, this function is not necessarily optimized, meaning it may be possible to 
 points in a different order that would result in fewer points having to be removed.
 }
 \author{
-Shannon E. Albeke and Jason D. Carlisle, University of Wyoming, <jason.d.carlisle@gmail.com>
+Shannon E. Albeke and Jason D. Carlisle, University of Wyoming
 }
 
