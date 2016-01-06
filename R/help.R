@@ -3,11 +3,11 @@
 # any changes here, in order for those changes to appear in the .Rd files.
 
 
-#' This package is a collection of tools for ecological research.  Each function
-#' has contributing authors listed in its help documentation.
+#' Assorted tools to facilitate the management and analysis of ecological information.
+#' Current functions focus on tools for spatial analysis and statistics.
 #'
 #' Bug reports or suggestions for the ecoinfo package should be directed to <jason.d.carlisle@@gmail.com>
-#' @title ecoinfo:  Assorted Tools for Ecoinformatics
+#' @title ecoinfo:  Assorted Tools for the Management and Analysis of Ecological Information
 #' @docType package
 #' @name ecoinfo
 NULL

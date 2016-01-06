@@ -1,13 +1,14 @@
 Package: ecoinfo
 Type: Package
-Title: Assorted Tools for Ecoinformatics
-Version: 0.0.1
-Date: 2015-10-13
+Title: Assorted Tools for the Management and Analysis of Ecological Information
+Version: 0.9.0
+Date: 2016-01-06
 Authors@R:  c(
     as.person("Jason D. Carlisle <jason.d.carlisle@gmail.com> [aut, cre]"),
     as.person("Shannon E. Albeke <salbeke@uwyo.edu> [aut]"))
 Maintainer: Jason D. Carlisle <jason.d.carlisle@gmail.com>
-Description: Assorted tools useful in ...
+Description: Assorted tools to facilitate the management and analysis of ecological information.  Current functions
+    focus on tools for spatial analysis and statistics.
 Imports:
     utils,
     sp,
