@@ -9,6 +9,7 @@ Authors@R:  c(
 Maintainer: Jason D. Carlisle <jason.d.carlisle@gmail.com>
 Description: Assorted tools to facilitate the management and analysis of ecological information.  Current functions
     focus on tools for spatial analysis and statistics.
+URL:  https://github.com/jcarlis3/ecoinfo
 Imports:
     utils,
     sp,
