@@ -1,4 +1,4 @@
 # ecoinfo
-Tools for Ecoinformatics
+*Assorted Tools for the Management and Analysis of Ecological Information*
 
-Assorted tools...
+This package contains assorted tools to facilitate the management and analysis of ecological information.  Current functions focus on tools for spatial analysis and statistics.
