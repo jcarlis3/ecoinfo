@@ -4,7 +4,7 @@
 \alias{hier.boot.mean}
 \title{Bootstrap CI of the mean with hierarchical data}
 \usage{
-hier.boot.mean(x, strata, data, B = 100, ci = 0.95, plot = TRUE)
+hier.boot.mean(x, strata, data, B = 500, ci = 0.95, plot = TRUE)
 }
 \arguments{
 \item{x}{Name of column (in quotes) containing numeric sub-level measurements.}
@@ -13,7 +13,7 @@ hier.boot.mean(x, strata, data, B = 100, ci = 0.95, plot = TRUE)
 
 \item{data}{Data.frame containing the above columns.}
 
-\item{B}{Number of bootstrap replicates.  Default is 100.}
+\item{B}{Number of bootstrap replicates.  Default is 500.}
 
 \item{ci}{Level of confidence interval (CI).  Default is 95\% CI.}
 
@@ -24,10 +24,10 @@ A named numeric vector giving the observed mean and lower and upper confidence l
 }
 \description{
 This function applies a non-parametric bootstrapping procedure suited to hierarchically structured data, sometimes called a multi-stage bootstrap.
-For example, random sites are selected, then multiple sub-plots are surveyed at each site.  Resampling is done first at the top level, then at the sub-level
+A study where random sites are selected, then multiple sub-plots are surveyed at each site would be a hierarchical example.
+Here, resampling is done first at the top level, then at the sub-level
 measurements associated with that top level stratum.  There is some debate about whether resampling at each level should be done with or without
 replacement.  Here, we sample with replacement at both levels.
-accepts a data.frame where one column is top-level strata, one column is values of interest  and returns a bootstrap-generated CI of the mean.
 }
 \author{
 Jason D. Carlisle, University of Wyoming
