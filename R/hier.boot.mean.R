@@ -1,23 +1,23 @@
 #' Bootstrap CI of the mean with hierarchical data
 #'
 #' This function applies a non-parametric bootstrapping procedure suited to hierarchically structured data, sometimes called a multi-stage bootstrap.
-#' For example, random sites are selected, then multiple sub-plots are surveyed at each site.  Resampling is done first at the top level, then at the sub-level
+#' A study where random sites are selected, then multiple sub-plots are surveyed at each site would be a hierarchical example.
+#' Here, resampling is done first at the top level, then at the sub-level
 #' measurements associated with that top level stratum.  There is some debate about whether resampling at each level should be done with or without
 #' replacement.  Here, we sample with replacement at both levels.
-#' accepts a data.frame where one column is top-level strata, one column is values of interest  and returns a bootstrap-generated CI of the mean.
 #'
 #' @param x Name of column (in quotes) containing numeric sub-level measurements.
 #' @param strata Name of column (in quotes) containing factors that identify top-level strata.
 #' @param ci Level of confidence interval (CI).  Default is 95\% CI.
 #' @param data Data.frame containing the above columns.
-#' @param B Number of bootstrap replicates.  Default is 100.
+#' @param B Number of bootstrap replicates.  Default is 500.
 #' @param plot Logical, should a histogram of the bootstrap replicates and CI be plotted.  Default is TRUE.
 #' @return A named numeric vector giving the observed mean and lower and upper confidence limits.
 #' @seealso boot.mean
 #' @author Jason D. Carlisle, University of Wyoming
 
 
-hier.boot.mean <- function(x, strata, data, B=100, ci=0.95, plot=TRUE){
+hier.boot.mean <- function(x, strata, data, B=500, ci=0.95, plot=TRUE){
   
   # Pull columns from dataframe
   (d <- data.frame(strata = data[, strata], x = data[, x]))
