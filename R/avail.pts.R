@@ -6,7 +6,7 @@
 #'
 #' @param used SpatialPointsDataFrame, the used (i.e., presence) points.
 #' @param poly SpatialPolygonsDataFrame, the area within which random, available points are generated.
-#' @param dist Scalar, passed to jdcR::remove.near.  The minimum distance features in pts can be from each other.  Unit is meters for projected coordinate systems.
+#' @param dist Scalar, passed to ecoinfo::remove.near.  The minimum distance output points can be from the used points, and from each other.  Unit is meters for projected coordinate systems.
 #' @param mult Scalar, the ratio of available points to used points.  1 for a balanced design, 2 for twice as many available points.
 #' @return A SpatialPointsDataFrame of random, available (i.e., pseudo-absence) points.
 #' @author Shannon E. Albeke and Jason D. Carlisle, University of Wyoming
@@ -35,7 +35,7 @@ avail.pts <- function(used, poly, dist=NULL, mult=1){
 
   # If min dist rule is applied, remove available points too close to other available points
   if(!is.null(dist)){
-    RandRetainedPts <- jdcR::remove.near(pts=RandPts, dist=dist)
+    RandRetainedPts <- ecoinfo::remove.near(pts=RandPts, dist=dist)
   }else{
     RandRetainedPts <- RandPts
   }
