@@ -11,7 +11,7 @@ avail.pts(used, poly, dist = NULL, mult = 1)
 
 \item{poly}{SpatialPolygonsDataFrame, the area within which random, available points are generated.}
 
-\item{dist}{Scalar, passed to jdcR::remove.near.  The minimum distance features in pts can be from each other.  Unit is meters for projected coordinate systems.}
+\item{dist}{Scalar, passed to ecoinfo::remove.near.  The minimum distance output points can be from the used points, and from each other.  Unit is meters for projected coordinate systems.}
 
 \item{mult}{Scalar, the ratio of available points to used points.  1 for a balanced design, 2 for twice as many available points.}
 }
