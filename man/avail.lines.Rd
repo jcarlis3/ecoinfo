@@ -16,13 +16,20 @@ avail.lines(poly, n, length, dist)
 \item{dist}{Scalar, the minimum distance output lines can be from each other.  Unit is meters for projected coordinate systems.}
 }
 \value{
-A SpatialLines object of random, available (i.e., pseudo-absence) lines.
+A SpatialLinesDataFrame object of random, available (i.e., pseudo-absence) lines.
 }
 \description{
-This function creates random, available (i,e, pseudo-absence) lines that are within a specified polygon.
+This function creates random, available (i,e, pseudo-absence) lines that are within the features of a specified polygon.
 The created lines conform to a user-specified proximity rule, i.e., lines are not created within a specified
-minimum distance from each other.  The direction of each line is random.  All lines have the same length.
-Each line must be fully contained within the polygon.  Currently works best when input polygon is one feature.
+minimum distance from each other (rule enforced within a feature, but not between overlapping features).
+The direction of each line is random.  All lines have the same length.  Each line are fully contained within the polygon.
+Suited for input polygons with one or multiple features.
+}
+\details{
+Suited for input polygons with one or multiple features.  For example, if n=5 and poly has 3 features, the output will
+have 15 total lines, 5 in each of the 3 polygon features.  The output object will have a @data slot with columns that identify
+the polygon, a unique lineID, the coordinates of the line end-points, and the line length.  Lengths may be slightly different
+from what is specified in the length argument.  This is due to circles created by gBuffer being imperfectly smooth.
 }
 \author{
 Jason D. Carlisle, University of Wyoming
