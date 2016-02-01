@@ -1,8 +1,8 @@
 Package: ecoinfo
 Type: Package
 Title: Assorted Tools for the Management and Analysis of Ecological Information
-Version: 0.9.0
-Date: 2016-01-11
+Version: 0.9.1
+Date: 2016-02-01
 Authors@R: c(
     as.person("Jason D. Carlisle <jason.d.carlisle@gmail.com> [aut, cre]"),
     as.person("Shannon E. Albeke <salbeke@uwyo.edu> [aut]"))
