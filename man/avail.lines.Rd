@@ -29,7 +29,7 @@ Suited for input polygons with one or multiple features.
 Suited for input polygons with one or multiple features.  For example, if n=5 and poly has 3 features, the output will
 have 15 total lines, 5 in each of the 3 polygon features.  The output object will have a @data slot with columns that identify
 the polygon, a unique lineID, the coordinates of the line end-points, and the line length.  Lengths may be slightly different
-from what is specified in the length argument.  This is due to circles created by gBuffer being imperfectly smooth.
+from what is specified in the length argument.  This is due to circles created by rgeos::gBuffer being imperfectly smooth.
 }
 \author{
 Jason D. Carlisle, University of Wyoming

@@ -15,7 +15,7 @@
 #' @details Suited for input polygons with one or multiple features.  For example, if n=5 and poly has 3 features, the output will
 #' have 15 total lines, 5 in each of the 3 polygon features.  The output object will have a @data slot with columns that identify
 #' the polygon, a unique lineID, the coordinates of the line end-points, and the line length.  Lengths may be slightly different
-#' from what is specified in the length argument.  This is due to circles created by gBuffer being imperfectly smooth. 
+#' from what is specified in the length argument.  This is due to circles created by rgeos::gBuffer being imperfectly smooth. 
 
 
 avail.lines <- function(poly, n, length, dist){
@@ -48,7 +48,7 @@ avail.lines <- function(poly, n, length, dist){
     beg.coords <- data.frame(x=sp::coordinates(pt)[1], y=sp::coordinates(pt)[2])
     end.coords <- data.frame(x=sp::coordinates(pt2)[1], y=sp::coordinates(pt2)[2])
     rand.lines[[i]] <- sp::SpatialLines(list(sp::Lines(list(sp::Line(rbind(beg.coords, end.coords))), ID=as.character(paste(i, j, sep=".")))))
-    proj4string(rand.lines[[i]]) <- proj4string(p)
+    sp::proj4string(rand.lines[[i]]) <- sp::proj4string(p)
     # plot(rand.lines[[i]], col="blue", add=TRUE, lwd=2)
 
     # Turn into SLDF
@@ -80,7 +80,7 @@ avail.lines <- function(poly, n, length, dist){
       beg.coords <- data.frame(x=sp::coordinates(pt)[1], y=sp::coordinates(pt)[2])
       end.coords <- data.frame(x=sp::coordinates(pt2)[1], y=sp::coordinates(pt2)[2])
       new.line <- sp::SpatialLines(list(sp::Lines(list(sp::Line(rbind(beg.coords, end.coords))), ID=as.character(paste(i, j, sep=".")))))
-      proj4string(new.line) <- proj4string(p)
+      sp::proj4string(new.line) <- sp::proj4string(p)
       # plot(new.line, col="blue", add=TRUE, lwd=2)
       
       # Test if new line is too close to other lines, if so, next.  If not, append.

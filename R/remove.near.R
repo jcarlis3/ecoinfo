@@ -17,7 +17,7 @@ remove.near <- function(pts, dist){
   pts@data$temp.id <- 1:length(pts)
 
   #Create a complete distance matrix
-  d <- gDistance(pts, byid=TRUE) #uses rgeos package
+  d <- rgeos::gDistance(pts, byid=TRUE) #uses rgeos package
   #Remove the 0s on the diagonal (distance of point to itself)
   d[row(d) == col(d)] <- NA
 
