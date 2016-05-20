@@ -21,6 +21,9 @@
 avail.lines <- function(poly, n, length, dist){
   
   rand.lines <- list()  # Each feature's rand.lines will be a list component
+  
+  # Start text progress bar
+  pb <- txtProgressBar(min=1, max=length(poly), style = 3)
 
   for(i in 1:length(poly)){
     
@@ -67,6 +70,11 @@ avail.lines <- function(poly, n, length, dist){
       pt <- sp::spsample(x=p, n=1, type="random", iter=100)  # random point 1
       # plot(pt, add=TRUE)
       
+      # Test if pt placement failed, if so, go to the next j
+      if(is.null(pt)){
+        next
+      }
+      
       # Create a temporary line to drop the endpoint on
       circ <- rgeos::gBuffer(pt, width=length)  # buffer
       cl <- as(circ, "SpatialLines")  # convert to line
@@ -75,6 +83,11 @@ avail.lines <- function(poly, n, length, dist){
       # plot(cl.in, add=TRUE, col="red", lwd=3)
       pt2 <- sp::spsample(x=cl.in, n=1, type="random", iter=100)  # random point 2
       # plot(pt2, add=TRUE)
+      
+      # Test if pt2 placement failed, if so, go to the next j
+      if(is.null(pt2)){
+        next
+      }
       
       # Turn two points into the line of interest (SpatialLines object)
       beg.coords <- data.frame(x=sp::coordinates(pt)[1], y=sp::coordinates(pt)[2])
@@ -101,7 +114,13 @@ avail.lines <- function(poly, n, length, dist){
       
     }  # end while
     
-  }  # end for loop of poly features
+    # Update progress bar
+    setTxtProgressBar(pb, i)
+    
+  }  # end (i) for loop of poly features
+  
+  # Close progress bar
+  close(pb)
   
   # Each feature has a rand.lines.  rbind them all together
   # IDs for each line must be unique
