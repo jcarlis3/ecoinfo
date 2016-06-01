@@ -22,7 +22,7 @@ A SpatialLinesDataFrame object of random, available (i.e., pseudo-absence) lines
 This function creates random, available (i,e, pseudo-absence) lines that are within the features of a specified polygon.
 The created lines conform to a user-specified proximity rule, i.e., lines are not created within a specified
 minimum distance from each other (rule enforced within a feature, but not between overlapping features).
-The direction of each line is random.  All lines have the same length.  Each line are fully contained within the polygon.
+The direction of each line is random.  All lines have the same length.  Each line is fully contained within the polygon.
 Suited for input polygons with one or multiple features.
 }
 \details{

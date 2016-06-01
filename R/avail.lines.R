@@ -3,7 +3,7 @@
 #' This function creates random, available (i,e, pseudo-absence) lines that are within the features of a specified polygon.
 #' The created lines conform to a user-specified proximity rule, i.e., lines are not created within a specified
 #' minimum distance from each other (rule enforced within a feature, but not between overlapping features).
-#' The direction of each line is random.  All lines have the same length.  Each line are fully contained within the polygon.
+#' The direction of each line is random.  All lines have the same length.  Each line is fully contained within the polygon.
 #' Suited for input polygons with one or multiple features.
 #'
 #' @param poly SpatialPolygonsDataFrame, the area within which random, available lines are generated.
@@ -22,9 +22,12 @@ avail.lines <- function(poly, n, length, dist){
   
   rand.lines <- list()  # Each feature's rand.lines will be a list component
   
-  # Start text progress bar
-  pb <- txtProgressBar(min=1, max=length(poly), style = 3)
-
+  # Start text progress bar (if there are multiple features in the polygon)
+  
+  if(length(poly) >1){
+    pb <- txtProgressBar(min=1, max=length(poly), style = 3)
+  }
+  
   for(i in 1:length(poly)){
     
     # Subset poly to one feature
@@ -115,12 +118,17 @@ avail.lines <- function(poly, n, length, dist){
     }  # end while
     
     # Update progress bar
-    setTxtProgressBar(pb, i)
+    if(length(poly) >1){
+      setTxtProgressBar(pb, i)
+    }
+    
     
   }  # end (i) for loop of poly features
   
   # Close progress bar
-  close(pb)
+  if(length(poly) >1){
+    close(pb)
+  }
   
   # Each feature has a rand.lines.  rbind them all together
   # IDs for each line must be unique
