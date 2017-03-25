@@ -33,6 +33,11 @@ simReserve <- function(target.poly, buff.width, total.area, wiggle){
   # Given the largest possible buffwidth, calc number of (unique) circles needed
   # (if no overlap of circles, but there likely will be), less one.
   start.num <- trunc((total.area / (pi*(buff.width[2]^2))) - 1)
+  
+  # For small total.area or big buff.width, start.num could be 0.  Start with 1 in this case
+  if(start.num == 0){
+    start.num <- 1
+  }
 
   # plot(target.poly, lwd=2, add=TRUE)
 
