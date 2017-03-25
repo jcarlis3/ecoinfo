@@ -29,10 +29,9 @@ Here, resampling is done first at the top level, then at the sub-level
 measurements associated with that top level stratum.  There is some debate about whether resampling at each level should be done with or without
 replacement.  Here, we sample with replacement at both levels.
 }
-\author{
-Jason D. Carlisle, University of Wyoming
-}
 \seealso{
 boot.mean
 }
-
+\author{
+Jason D. Carlisle, University of Wyoming
+}

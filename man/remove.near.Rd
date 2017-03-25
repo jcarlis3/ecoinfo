@@ -23,4 +23,3 @@ points in a different order that would result in fewer points having to be remov
 \author{
 Shannon E. Albeke and Jason D. Carlisle, University of Wyoming
 }
-

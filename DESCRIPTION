@@ -1,8 +1,8 @@
 Package: ecoinfo
 Type: Package
 Title: Assorted Tools for the Management and Analysis of Ecological Information
-Version: 0.9.3
-Date: 2017-02-08
+Version: 0.9.4
+Date: 2017-03-25
 Authors@R: c(
     as.person("Jason D. Carlisle <jason.d.carlisle@gmail.com> [aut, cre]"),
     as.person("Shannon E. Albeke <salbeke@uwyo.edu> [aut]"))
@@ -17,4 +17,4 @@ Imports:
     rgeos
 License: GPL-3
 LazyData: TRUE
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1

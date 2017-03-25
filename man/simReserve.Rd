@@ -32,4 +32,3 @@ than the specified area is acceptable.
 \author{
 Jason D. Carlisle, University of Wyoming and WEST, Inc., <jason.d.carlisle@gmail.com>
 }
-

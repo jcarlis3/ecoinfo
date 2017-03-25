@@ -12,4 +12,3 @@ Current functions focus on tools for spatial analysis and statistics.
 \details{
 Bug reports or suggestions for the ecoinfo package should be directed to <jason.d.carlisle@gmail.com>
 }
-

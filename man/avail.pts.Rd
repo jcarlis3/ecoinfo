@@ -26,4 +26,3 @@ minimum distance from each other or the original used points.
 \author{
 Shannon E. Albeke and Jason D. Carlisle, University of Wyoming
 }
-

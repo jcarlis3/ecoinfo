@@ -27,4 +27,3 @@ boot.mean(vec=x, b=100, ci=0.95)
 \author{
 Jason D. Carlisle, University of Wyoming
 }
-

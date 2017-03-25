@@ -34,4 +34,3 @@ from what is specified in the length argument.  This is due to circles created b
 \author{
 Jason D. Carlisle, University of Wyoming
 }
-
