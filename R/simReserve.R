@@ -90,8 +90,10 @@ simReserve <- function(target.poly, buff.width, total.area, wiggle){
       rad <- sqrt((to.cut/pi))
 
       # Add one random polygon inside rand.poly (that won't reach outside rand.poly) to erase
-      temp <- rgeos::gBuffer(rand.poly, width=-rad)
-      x <- sp::spsample(temp, n=1, type="random", iter=1000) # select 1 point
+      # temp <- rgeos::gBuffer(rand.poly, width=-rad)
+      # x <- sp::spsample(temp, n=1, type="random", iter=1000) # select 1 point
+      # Changed, now the random polygon to cut can rech beyond rand.poly
+      x <- sp::spsample(rand.poly, n=1, type="random", iter=1000) # select 1 point
       x <- rgeos::gBuffer(x, width=rad) # buffer that point
       
       # plot(x, add=TRUE, col="blue")
