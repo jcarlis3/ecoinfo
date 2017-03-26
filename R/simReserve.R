@@ -45,7 +45,7 @@ simReserve <- function(target.poly, buff.width, total.area, wiggle){
   # Create simulated protected area using randomly sited circles
   # Because some likely overlap and because we're assuming all have the max radius length, more than (start.num) will be needed
   rand.poly <- sp::spsample(target.poly, n=start.num, type="random", iter=1000)
-  plot(rand.poly, add=TRUE)
+  # plot(rand.poly, add=TRUE)
   rand.poly <- rgeos::gBuffer(rand.poly, byid=TRUE,
                               width=runif(length(rand.poly), buff.width[1], buff.width[2]))
   
